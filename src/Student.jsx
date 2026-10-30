@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function Student() {
   var [students, setStudents] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/students")
+    fetch("http://localhost:4500/student/getAllStudents")
       .then((res) => res.json())
       .then((data) => setStudents([...data]));
   }, []);
